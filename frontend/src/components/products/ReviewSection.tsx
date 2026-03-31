@@ -128,13 +128,11 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
     background: "var(--bg-surface)",
     border: "1px solid var(--border-default)",
     color: "var(--text-primary)",
-    fontFamily: "var(--font-mono)",
     fontSize: "12px",
     letterSpacing: "0.05em",
   };
 
   const labelStyle: React.CSSProperties = {
-    fontFamily: "var(--font-mono)",
     fontSize: "10px",
     fontWeight: 700,
     letterSpacing: "0.15em",
@@ -162,7 +160,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
             className="text-[11px] uppercase tracking-wider"
             style={{
               color: "var(--text-muted)",
-              fontFamily: "var(--font-mono)",
             }}
           >
             Ładowanie opinii...
@@ -199,7 +196,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
                 className="text-[11px]"
                 style={{
                   color: "var(--text-muted)",
-                  fontFamily: "var(--font-mono)",
                 }}
               >
                 ({reviews.length} {reviews.length === 1 ? "opinia" : "opinii"})
@@ -215,7 +211,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
             style={{
               background: "var(--accent)",
               color: "#000",
-              fontFamily: "var(--font-mono)",
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.background = "#FFF")
@@ -242,7 +237,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
             className="text-[12px]"
             style={{
               color: "var(--text-secondary)",
-              fontFamily: "var(--font-mono)",
             }}
           >
             Opinia przesłana do zatwierdzenia. Pojawi się po sprawdzeniu przez nasz
@@ -263,7 +257,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
         >
           <h3
             className="text-[11px] font-black tracking-[0.15em] uppercase mb-5"
-            style={{ fontFamily: "var(--font-mono)" }}
           >
             Napisz opinię
           </h3>
@@ -311,7 +304,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
                 style={{
                   background: "var(--accent)",
                   color: "#000",
-                  fontFamily: "var(--font-mono)",
                 }}
                 onMouseEnter={(e) => {
                   if (!submitting) e.currentTarget.style.background = "#FFF";
@@ -334,7 +326,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
                 style={{
                   border: "1px solid var(--border-default)",
                   color: "var(--text-muted)",
-                  fontFamily: "var(--font-mono)",
                   background: "transparent",
                 }}
                 onMouseEnter={(e) =>
@@ -368,7 +359,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
             className="text-[13px] mb-1"
             style={{
               color: "var(--text-secondary)",
-              fontFamily: "var(--font-mono)",
             }}
           >
             Brak opinii.
@@ -377,7 +367,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
             className="text-[11px]"
             style={{
               color: "var(--text-muted)",
-              fontFamily: "var(--font-mono)",
             }}
           >
             Bądź pierwszy, który napisze opinię!
@@ -397,7 +386,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
                 <div className="flex items-center gap-3">
                   <span
                     className="text-[12px] font-bold"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {review.username}
                   </span>
@@ -407,7 +395,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
                   className="text-[10px]"
                   style={{
                     color: "var(--text-muted)",
-                    fontFamily: "var(--font-mono)",
                   }}
                 >
                   {new Date(review.created_at).toLocaleDateString("pl-PL", {
@@ -420,7 +407,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
               {review.title && (
                 <h4
                   className="text-[13px] font-bold mb-1"
-                  style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {review.title}
                 </h4>
@@ -429,7 +415,6 @@ export default function ReviewSection({ productId }: ReviewSectionProps) {
                 className="text-[12px] leading-relaxed"
                 style={{
                   color: "var(--text-secondary)",
-                  fontFamily: "var(--font-mono)",
                 }}
               >
                 {review.comment}

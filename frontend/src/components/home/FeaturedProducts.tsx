@@ -102,7 +102,7 @@ export default function FeaturedProducts({
                   <div className="w-4 h-px" style={{ background: "var(--border-default)" }} />
                   <span
                     className="text-[10px] tracking-[0.12em] uppercase"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                    style={{ color: "var(--text-muted)" }}
                   >
                     {subtitle}
                   </span>
@@ -163,7 +163,6 @@ export default function FeaturedProducts({
                 style={{
                   border: "1px solid var(--border-default)",
                   color: "var(--text-secondary)",
-                  fontFamily: "var(--font-mono)",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "var(--accent)";
@@ -259,7 +258,6 @@ export default function FeaturedProducts({
             style={{
               color: "var(--accent)",
               border: "1px solid var(--accent)",
-              fontFamily: "var(--font-mono)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "var(--accent)";

@@ -161,7 +161,6 @@ export default function Header() {
                     className="flex items-center gap-1 px-3 py-2 text-[12px] font-medium tracking-[0.08em] uppercase transition-colors duration-100"
                     style={{
                       color: activeMega === item.label ? "var(--accent)" : "var(--text-secondary)",
-                      fontFamily: "var(--font-mono)",
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = activeMega === item.label ? "var(--accent)" : "var(--text-secondary)")}
@@ -210,7 +209,7 @@ export default function Header() {
                                     <Link
                                       href={link.href}
                                       className="block text-[13px] py-1 transition-colors duration-100 hover:text-[var(--text-primary)]"
-                                      style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                                      style={{ color: "var(--text-muted)" }}
                                     >
                                       {link.label}
                                     </Link>
@@ -308,7 +307,7 @@ export default function Header() {
                 onChange={(e) => handleSearchChange(e.target.value)}
                 placeholder="SZUKAJ..."
                 className="w-full py-4 pl-12 pr-4 bg-transparent text-[13px] outline-none uppercase tracking-wider"
-                style={{ color: "var(--text-primary)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-primary)" }}
                 onKeyDown={(e) => e.key === "Escape" && setSearchOpen(false)}
               />
               <button
@@ -332,7 +331,7 @@ export default function Header() {
                 {searchLoading && (
                   <div
                     className="px-4 py-3 text-[11px] uppercase tracking-wider"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                    style={{ color: "var(--text-muted)" }}
                   >
                     Wyszukiwanie...
                   </div>
@@ -341,7 +340,7 @@ export default function Header() {
                 {!searchLoading && searchResults.length === 0 && (
                   <div
                     className="px-4 py-3 text-[11px] uppercase tracking-wider"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                    style={{ color: "var(--text-muted)" }}
                   >
                     Brak wyników
                   </div>
@@ -362,13 +361,13 @@ export default function Header() {
                         <div className="flex flex-col gap-0.5 min-w-0">
                           <span
                             className="text-[13px] font-medium truncate"
-                            style={{ color: "var(--text-primary)", fontFamily: "var(--font-mono)" }}
+                            style={{ color: "var(--text-primary)" }}
                           >
                             {product.name}
                           </span>
                           <span
                             className="text-[10px] uppercase tracking-wider"
-                            style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                            style={{ color: "var(--text-muted)" }}
                           >
                             {product.product_type}
                           </span>
@@ -385,7 +384,7 @@ export default function Header() {
                       href={`/search?q=${encodeURIComponent(searchQuery)}`}
                       onClick={() => setSearchOpen(false)}
                       className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-center transition-colors duration-100"
-                      style={{ color: "var(--accent)", fontFamily: "var(--font-mono)" }}
+                      style={{ color: "var(--accent)" }}
                       onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-elevated)")}
                       onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                     >

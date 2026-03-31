@@ -205,14 +205,14 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
             </h1>
             <p
               className="text-[13px] mb-8"
-              style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               Twój koszyk jest pusty. Najpierw dodaj produkty.
             </p>
             <Link
               href="/single-cards"
               className="inline-flex items-center gap-2 px-6 py-3 text-[12px] font-black uppercase tracking-wider transition-colors duration-100"
-              style={{ background: "var(--accent)", color: "#000", fontFamily: "var(--font-mono)" }}
+              style={{ background: "var(--accent)", color: "#000" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "#FFF")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
             >
@@ -240,7 +240,7 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
           <Link
             href="/cart"
             className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.1em] uppercase mb-4 transition-colors duration-100"
-            style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+            style={{ color: "var(--text-muted)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
@@ -275,7 +275,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                 >
                   <h2
                     className="text-[11px] font-black tracking-[0.15em] uppercase"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Dane kontaktowe
                   </h2>
@@ -344,7 +343,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                 >
                   <h2
                     className="text-[11px] font-black tracking-[0.15em] uppercase"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Adres dostawy
                   </h2>
@@ -417,7 +415,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                 >
                   <h2
                     className="text-[11px] font-black tracking-[0.15em] uppercase"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Metoda płatności
                   </h2>
@@ -464,7 +461,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                         <span
                           className="text-[12px] font-bold uppercase tracking-wider"
                           style={{
-                            fontFamily: "var(--font-mono)",
                             color: isSelected ? "var(--text-primary)" : "var(--text-secondary)",
                           }}
                         >
@@ -506,7 +502,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                 >
                   <h2
                     className="text-[11px] font-black tracking-[0.15em] uppercase"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Uwagi do zamówienia (opcjonalne)
                   </h2>
@@ -537,7 +532,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                 >
                   <h2
                     className="text-[11px] font-black tracking-[0.15em] uppercase"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Podsumowanie zamówienia
                   </h2>
@@ -573,7 +567,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                       <div className="flex-1 min-w-0">
                         <p
                           className="text-[11px] font-bold uppercase tracking-wider line-clamp-1"
-                          style={{ fontFamily: "var(--font-mono)" }}
                         >
                           {item.product.name}
                         </p>
@@ -581,7 +574,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                           className="text-[10px] mt-0.5"
                           style={{
                             color: "var(--text-muted)",
-                            fontFamily: "var(--font-mono)",
                           }}
                         >
                           Ilość: {item.quantity}
@@ -635,7 +627,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                         className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 transition-colors duration-100"
                         style={{
                           color: "var(--text-muted)",
-                          fontFamily: "var(--font-mono)",
                           background: "transparent",
                           border: "1px solid var(--border-default)",
                         }}
@@ -674,7 +665,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                           style={{
                             background: "var(--accent)",
                             color: "#000",
-                            fontFamily: "var(--font-mono)",
                           }}
                           onMouseEnter={(e) => {
                             if (!couponLoading && couponCode.trim())
@@ -690,7 +680,7 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                       {couponError && (
                         <p
                           className="text-[10px] mt-2"
-                          style={{ color: "#ef4444", fontFamily: "var(--font-mono)" }}
+                          style={{ color: "#ef4444" }}
                         >
                           {couponError}
                         </p>
@@ -709,7 +699,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                       className="text-[12px]"
                       style={{
                         color: "var(--text-secondary)",
-                        fontFamily: "var(--font-mono)",
                       }}
                     >
                       Suma częściowa
@@ -727,7 +716,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                         className="text-[12px]"
                         style={{
                           color: "#22c55e",
-                          fontFamily: "var(--font-mono)",
                         }}
                       >
                         Rabat
@@ -748,7 +736,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                       className="text-[12px]"
                       style={{
                         color: "var(--text-secondary)",
-                        fontFamily: "var(--font-mono)",
                       }}
                     >
                       Wysyłka
@@ -774,7 +761,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                 >
                   <span
                     className="text-[12px] font-black uppercase tracking-wider"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Suma
                   </span>
@@ -797,7 +783,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                     style={{
                       background: "var(--accent)",
                       color: "#000",
-                      fontFamily: "var(--font-mono)",
                     }}
                     onMouseEnter={(e) => {
                       if (!isSubmitting) e.currentTarget.style.background = "#FFF";
@@ -813,7 +798,6 @@ function CheckoutForm({ inputStyle, labelStyle }: CheckoutFormProps) {
                     className="text-[10px] text-center mt-3"
                     style={{
                       color: "var(--text-muted)",
-                      fontFamily: "var(--font-mono)",
                     }}
                   >
                     Bezpieczne zamówienie. Twoje dane są szyfrowane.
@@ -836,13 +820,11 @@ export default function CheckoutPage() {
     background: "var(--bg-surface)",
     border: "1px solid var(--border-default)",
     color: "var(--text-primary)",
-    fontFamily: "var(--font-mono)",
     fontSize: "12px",
     letterSpacing: "0.05em",
   };
 
   const labelStyle: React.CSSProperties = {
-    fontFamily: "var(--font-mono)",
     fontSize: "10px",
     fontWeight: 700,
     letterSpacing: "0.15em",
@@ -867,14 +849,14 @@ export default function CheckoutPage() {
             </h1>
             <p
               className="text-[13px] mb-8"
-              style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               Twój koszyk jest pusty. Najpierw dodaj produkty.
             </p>
             <Link
               href="/single-cards"
               className="inline-flex items-center gap-2 px-6 py-3 text-[12px] font-black uppercase tracking-wider transition-colors duration-100"
-              style={{ background: "var(--accent)", color: "#000", fontFamily: "var(--font-mono)" }}
+              style={{ background: "var(--accent)", color: "#000" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "#FFF")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
             >

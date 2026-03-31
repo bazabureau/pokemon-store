@@ -56,7 +56,6 @@ const STATUS_CONFIG: Record<string, { label: string; color: string; bg: string }
 /* ─── Shared Styles ─── */
 
 const labelStyle: CSSProperties = {
-  fontFamily: "var(--font-mono)",
   fontSize: "10px",
   fontWeight: 700,
   letterSpacing: "0.15em",
@@ -70,7 +69,6 @@ const inputBaseStyle: CSSProperties = {
   background: "var(--bg-surface)",
   border: "1px solid var(--border-default)",
   color: "var(--text-primary)",
-  fontFamily: "var(--font-mono)",
   fontSize: "13px",
   letterSpacing: "0.03em",
   width: "100%",
@@ -181,7 +179,6 @@ function TextInput({
       {error && (
         <p
           style={{
-            fontFamily: "var(--font-mono)",
             fontSize: "10px",
             color: "#F87171",
             marginTop: "4px",
@@ -223,7 +220,6 @@ function PrimaryButton({
         fontWeight: 900,
         textTransform: "uppercase",
         letterSpacing: "0.15em",
-        fontFamily: "var(--font-mono)",
         background: loading ? "var(--text-muted)" : hovered ? "#FFFFFF" : "var(--accent)",
         color: "#000000",
         border: "none",
@@ -266,7 +262,6 @@ function AuthTabs({
             fontWeight: 800,
             textTransform: "uppercase",
             letterSpacing: "0.12em",
-            fontFamily: "var(--font-mono)",
             background: "none",
             border: "none",
             cursor: "pointer",
@@ -358,7 +353,7 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
           placeholder="Wpisz haslo"
         />
         {errors.password && (
-          <p style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "#F87171", marginTop: "4px" }}>
+          <p style={{ fontSize: "10px", color: "#F87171", marginTop: "4px" }}>
             {errors.password}
           </p>
         )}
@@ -453,7 +448,7 @@ function RegisterForm({ onSuccess }: { onSuccess: () => void }) {
           placeholder="Minimum 6 znakow"
         />
         {errors.password && (
-          <p style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "#F87171", marginTop: "4px" }}>
+          <p style={{ fontSize: "10px", color: "#F87171", marginTop: "4px" }}>
             {errors.password}
           </p>
         )}
@@ -467,7 +462,7 @@ function RegisterForm({ onSuccess }: { onSuccess: () => void }) {
           placeholder="Wpisz haslo ponownie"
         />
         {errors.password2 && (
-          <p style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "#F87171", marginTop: "4px" }}>
+          <p style={{ fontSize: "10px", color: "#F87171", marginTop: "4px" }}>
             {errors.password2}
           </p>
         )}
@@ -546,7 +541,6 @@ function OrderCard({ order, isLast }: { order: Order; isLast: boolean }) {
           <Clock size={11} style={{ color: "var(--text-muted)" }} />
           <span
             style={{
-              fontFamily: "var(--font-mono)",
               fontSize: "11px",
               color: "var(--text-muted)",
             }}
@@ -575,7 +569,6 @@ function OrderCard({ order, isLast }: { order: Order; isLast: boolean }) {
         >
           <span
             style={{
-              fontFamily: "var(--font-mono)",
               fontSize: "10px",
               color: "var(--text-muted)",
             }}
@@ -719,7 +712,6 @@ function ProfileSection({ user }: { user: any }) {
       >
         <h2
           style={{
-            fontFamily: "var(--font-mono)",
             fontSize: "11px",
             fontWeight: 900,
             letterSpacing: "0.15em",
@@ -741,7 +733,6 @@ function ProfileSection({ user }: { user: any }) {
                 color: "var(--text-secondary)",
                 cursor: "pointer",
                 padding: "6px 12px",
-                fontFamily: "var(--font-mono)",
                 fontSize: "10px",
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -762,7 +753,6 @@ function ProfileSection({ user }: { user: any }) {
                 color: "#000",
                 cursor: saving ? "not-allowed" : "pointer",
                 padding: "6px 12px",
-                fontFamily: "var(--font-mono)",
                 fontSize: "10px",
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -812,7 +802,6 @@ function ProfileSection({ user }: { user: any }) {
             </p>
             <p
               style={{
-                fontFamily: "var(--font-mono)",
                 fontSize: "12px",
                 color: "var(--text-muted)",
                 margin: 0,
@@ -872,7 +861,6 @@ function InfoRow({ icon, label, value }: { icon: React.ReactNode; label: string;
       <div>
         <p
           style={{
-            fontFamily: "var(--font-mono)",
             fontSize: "9px",
             fontWeight: 700,
             letterSpacing: "0.15em",
@@ -885,7 +873,6 @@ function InfoRow({ icon, label, value }: { icon: React.ReactNode; label: string;
         </p>
         <p
           style={{
-            fontFamily: "var(--font-mono)",
             fontSize: "13px",
             color: "var(--text-secondary)",
             margin: 0,
@@ -909,7 +896,6 @@ function EditButton({ onClick }: { onClick: () => void }) {
         color: hovered ? "var(--accent)" : "var(--text-secondary)",
         cursor: "pointer",
         padding: "6px 12px",
-        fontFamily: "var(--font-mono)",
         fontSize: "10px",
         fontWeight: 700,
         textTransform: "uppercase",
@@ -981,7 +967,6 @@ function ChangePasswordSection() {
           <Lock size={14} style={{ color: "var(--text-muted)" }} />
           <span
             style={{
-              fontFamily: "var(--font-mono)",
               fontSize: "11px",
               fontWeight: 900,
               letterSpacing: "0.15em",
@@ -1081,7 +1066,6 @@ function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string
       <div>
         <p
           style={{
-            fontFamily: "var(--font-mono)",
             fontSize: "9px",
             fontWeight: 700,
             letterSpacing: "0.15em",
@@ -1121,7 +1105,6 @@ function LogoutButton({ onClick, mobile }: { onClick: () => void; mobile?: boole
         alignItems: "center",
         gap: "8px",
         padding: mobile ? "14px 0" : "8px 16px",
-        fontFamily: "var(--font-mono)",
         fontSize: "11px",
         fontWeight: 700,
         textTransform: "uppercase",
@@ -1309,7 +1292,6 @@ export default function AccountPage() {
                 </h1>
                 <p
                   style={{
-                    fontFamily: "var(--font-mono)",
                     fontSize: "13px",
                     lineHeight: 1.7,
                     color: "var(--text-secondary)",
@@ -1343,7 +1325,6 @@ export default function AccountPage() {
                       </p>
                       <p
                         style={{
-                          fontFamily: "var(--font-mono)",
                           fontSize: "10px",
                           fontWeight: 700,
                           letterSpacing: "0.15em",
@@ -1430,7 +1411,6 @@ export default function AccountPage() {
                     <LoginForm onSuccess={() => {}} />
                     <p
                       style={{
-                        fontFamily: "var(--font-mono)",
                         fontSize: "12px",
                         color: "var(--text-muted)",
                         textAlign: "center",
@@ -1445,7 +1425,6 @@ export default function AccountPage() {
                           border: "none",
                           color: "var(--accent)",
                           cursor: "pointer",
-                          fontFamily: "var(--font-mono)",
                           fontSize: "12px",
                           fontWeight: 700,
                           padding: 0,
@@ -1462,7 +1441,6 @@ export default function AccountPage() {
                     <RegisterForm onSuccess={() => {}} />
                     <p
                       style={{
-                        fontFamily: "var(--font-mono)",
                         fontSize: "12px",
                         color: "var(--text-muted)",
                         textAlign: "center",
@@ -1477,7 +1455,6 @@ export default function AccountPage() {
                           border: "none",
                           color: "var(--accent)",
                           cursor: "pointer",
-                          fontFamily: "var(--font-mono)",
                           fontSize: "12px",
                           fontWeight: 700,
                           padding: 0,
@@ -1673,7 +1650,6 @@ export default function AccountPage() {
                 >
                   <h2
                     style={{
-                      fontFamily: "var(--font-mono)",
                       fontSize: "11px",
                       fontWeight: 900,
                       letterSpacing: "0.15em",
@@ -1710,7 +1686,6 @@ export default function AccountPage() {
                   <div style={{ padding: "32px 24px", textAlign: "center" }}>
                     <p
                       style={{
-                        fontFamily: "var(--font-mono)",
                         fontSize: "12px",
                         color: "#F87171",
                       }}
@@ -1736,7 +1711,6 @@ export default function AccountPage() {
                     </div>
                     <p
                       style={{
-                        fontFamily: "var(--font-mono)",
                         fontSize: "13px",
                         color: "var(--text-secondary)",
                         margin: "0 0 4px 0",
@@ -1746,7 +1720,6 @@ export default function AccountPage() {
                     </p>
                     <p
                       style={{
-                        fontFamily: "var(--font-mono)",
                         fontSize: "11px",
                         color: "var(--text-muted)",
                         margin: "0 0 24px 0",
@@ -1790,7 +1763,6 @@ function BrowseButton() {
         alignItems: "center",
         gap: "8px",
         padding: "12px 24px",
-        fontFamily: "var(--font-mono)",
         fontSize: "11px",
         fontWeight: 700,
         textTransform: "uppercase",

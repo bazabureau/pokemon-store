@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Syne, JetBrains_Mono } from "next/font/google";
+import { Inter, Syne, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 
@@ -10,17 +10,17 @@ const displayFont = Syne({
   display: "swap",
 });
 
-const bodyFont = DM_Sans({
+const bodyFont = Inter({
   variable: "--font-body",
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const monoFont = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 

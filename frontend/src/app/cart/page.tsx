@@ -131,7 +131,7 @@ export default function CartPage() {
               </h2>
               <p
                 className="text-[13px] mb-8"
-                style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-muted)" }}
               >
                 Zacznij dodawać karty premium do swojej kolekcji
               </p>
@@ -141,7 +141,6 @@ export default function CartPage() {
                 style={{
                   background: "var(--accent)",
                   color: "#000",
-                  fontFamily: "var(--font-mono)",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = "#FFF")}
                 onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
@@ -157,14 +156,14 @@ export default function CartPage() {
                 <div className="flex items-center justify-between mb-4">
                   <span
                     className="text-[11px] font-bold tracking-[0.15em] uppercase"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                    style={{ color: "var(--text-muted)" }}
                   >
                     {items.length} {items.length === 1 ? "produkt" : "produktów"}
                   </span>
                   <button
                     onClick={handleClear}
                     className="text-[11px] font-bold tracking-[0.1em] uppercase transition-colors duration-100"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                    style={{ color: "var(--text-muted)" }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--error)")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
                   >
@@ -214,7 +213,6 @@ export default function CartPage() {
                             <Link href={`/product/${item.product.slug}`}>
                               <h3
                                 className="text-[11px] sm:text-[12px] font-bold uppercase tracking-wider line-clamp-2 transition-colors duration-100 hover:text-[var(--accent)]"
-                                style={{ fontFamily: "var(--font-mono)" }}
                               >
                                 {item.product.name}
                               </h3>
@@ -224,7 +222,6 @@ export default function CartPage() {
                                 className="text-[10px] tracking-[0.15em] uppercase mt-1 block"
                                 style={{
                                   color: "var(--text-muted)",
-                                  fontFamily: "var(--font-mono)",
                                 }}
                               >
                                 {item.product.product_type.replace(/_/g, " ")}
@@ -317,7 +314,7 @@ export default function CartPage() {
                   <Link
                     href="/single-cards"
                     className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.1em] uppercase transition-colors duration-100"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                    style={{ color: "var(--text-muted)" }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
                   >
@@ -336,7 +333,6 @@ export default function CartPage() {
                   >
                     <h2
                       className="text-[11px] font-black tracking-[0.15em] uppercase"
-                      style={{ fontFamily: "var(--font-mono)" }}
                     >
                       Podsumowanie zamówienia
                     </h2>
@@ -346,7 +342,7 @@ export default function CartPage() {
                     <div className="flex justify-between">
                       <span
                         className="text-[12px]"
-                        style={{ color: "var(--text-secondary)", fontFamily: "var(--font-mono)" }}
+                        style={{ color: "var(--text-secondary)" }}
                       >
                         Suma częściowa
                       </span>
@@ -360,7 +356,7 @@ export default function CartPage() {
                     <div className="flex justify-between">
                       <span
                         className="text-[12px]"
-                        style={{ color: "var(--text-secondary)", fontFamily: "var(--font-mono)" }}
+                        style={{ color: "var(--text-secondary)" }}
                       >
                         Wysyłka
                       </span>
@@ -377,7 +373,7 @@ export default function CartPage() {
                     {shippingEstimate > 0 && (
                       <p
                         className="text-[10px]"
-                        style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                        style={{ color: "var(--text-muted)" }}
                       >
                         Darmowa wysyłka przy zamówieniach powyżej 500 PLN
                       </p>
@@ -390,7 +386,6 @@ export default function CartPage() {
                   >
                     <span
                       className="text-[12px] font-black uppercase tracking-wider"
-                      style={{ fontFamily: "var(--font-mono)" }}
                     >
                       Suma
                     </span>
@@ -409,7 +404,6 @@ export default function CartPage() {
                       style={{
                         background: "var(--accent)",
                         color: "#000",
-                        fontFamily: "var(--font-mono)",
                       }}
                       onMouseEnter={(e) => (e.currentTarget.style.background = "#FFF")}
                       onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}

@@ -138,13 +138,11 @@ export default function SellYourCardsPage() {
     background: "var(--bg-surface)",
     border: "1px solid var(--border-default)",
     color: "var(--text-primary)",
-    fontFamily: "var(--font-mono)",
     fontSize: "12px",
     letterSpacing: "0.05em",
   };
 
   const labelStyle: React.CSSProperties = {
-    fontFamily: "var(--font-mono)",
     fontSize: "10px",
     fontWeight: 700,
     letterSpacing: "0.15em",
@@ -185,7 +183,7 @@ export default function SellYourCardsPage() {
             </h1>
             <p
               className="text-sm max-w-lg leading-relaxed"
-              style={{ color: "var(--text-secondary)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--text-secondary)" }}
             >
               Kupujemy karty Pokemon premium w konkurencyjnych cenach. Bez opłat,
               bez problemów -- tylko uczciwe oferty i szybkie płatności.
@@ -201,7 +199,7 @@ export default function SellYourCardsPage() {
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <h2
               className="text-[10px] font-bold tracking-[0.2em] uppercase mb-10"
-              style={{ color: "var(--accent)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--accent)" }}
             >
               Jak to działa
             </h2>
@@ -243,7 +241,6 @@ export default function SellYourCardsPage() {
                     </div>
                     <h3
                       className="text-[13px] font-black uppercase tracking-wider mb-2"
-                      style={{ fontFamily: "var(--font-mono)" }}
                     >
                       {step.title}
                     </h3>
@@ -251,7 +248,6 @@ export default function SellYourCardsPage() {
                       className="text-[12px] leading-relaxed"
                       style={{
                         color: "var(--text-muted)",
-                        fontFamily: "var(--font-mono)",
                       }}
                     >
                       {step.description}
@@ -272,7 +268,6 @@ export default function SellYourCardsPage() {
                   className="text-[10px] font-bold tracking-[0.2em] uppercase mb-6"
                   style={{
                     color: "var(--accent)",
-                    fontFamily: "var(--font-mono)",
                   }}
                 >
                   Zgłoś swoje karty
@@ -305,7 +300,6 @@ export default function SellYourCardsPage() {
                       className="text-[13px]"
                       style={{
                         color: "var(--text-secondary)",
-                        fontFamily: "var(--font-mono)",
                       }}
                     >
                       Sprawdzimy Twoje zgłoszenie i odezwiemy się
@@ -482,7 +476,6 @@ export default function SellYourCardsPage() {
                           className="text-[12px] mb-1"
                           style={{
                             color: "var(--text-secondary)",
-                            fontFamily: "var(--font-mono)",
                           }}
                         >
                           Przeciągnij i upuść zdjęcia tutaj lub kliknij, aby przeglądać
@@ -491,7 +484,6 @@ export default function SellYourCardsPage() {
                           className="text-[10px]"
                           style={{
                             color: "var(--text-muted)",
-                            fontFamily: "var(--font-mono)",
                           }}
                         >
                           JPG, PNG do 10MB każdy
@@ -513,7 +505,6 @@ export default function SellYourCardsPage() {
                                 className="text-[11px] truncate"
                                 style={{
                                   color: "var(--text-secondary)",
-                                  fontFamily: "var(--font-mono)",
                                 }}
                               >
                                 {file.name}
@@ -527,7 +518,6 @@ export default function SellYourCardsPage() {
                                 className="text-[10px] font-bold uppercase tracking-wider ml-3 transition-colors duration-100"
                                 style={{
                                   color: "var(--text-muted)",
-                                  fontFamily: "var(--font-mono)",
                                 }}
                                 onMouseEnter={(e) =>
                                   (e.currentTarget.style.color =
@@ -553,7 +543,6 @@ export default function SellYourCardsPage() {
                       style={{
                         background: "var(--accent)",
                         color: "#000",
-                        fontFamily: "var(--font-mono)",
                       }}
                       onMouseEnter={(e) => {
                         if (!submitting) e.currentTarget.style.background = "#FFF";
@@ -583,7 +572,6 @@ export default function SellYourCardsPage() {
                   >
                     <h3
                       className="text-[11px] font-black tracking-[0.15em] uppercase"
-                      style={{ fontFamily: "var(--font-mono)" }}
                     >
                       Co kupujemy
                     </h3>
@@ -606,7 +594,6 @@ export default function SellYourCardsPage() {
                           className="text-[12px]"
                           style={{
                             color: "var(--text-secondary)",
-                            fontFamily: "var(--font-mono)",
                           }}
                         >
                           {item}
@@ -626,7 +613,6 @@ export default function SellYourCardsPage() {
                       className="text-[11px] mb-2"
                       style={{
                         color: "var(--text-muted)",
-                        fontFamily: "var(--font-mono)",
                       }}
                     >
                       Wolisz e-mail? Napisz do nas bezpośrednio:
@@ -636,7 +622,6 @@ export default function SellYourCardsPage() {
                       className="text-[13px] font-bold transition-colors duration-100"
                       style={{
                         color: "var(--accent)",
-                        fontFamily: "var(--font-mono)",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.color = "#FFF")

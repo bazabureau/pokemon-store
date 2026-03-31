@@ -375,7 +375,6 @@ export default function ProductCard({
             <h3
               className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] leading-snug mb-2.5 line-clamp-2 transition-colors duration-200"
               style={{
-                fontFamily: "var(--font-mono)",
                 color: isHovered ? "var(--accent)" : "var(--text-primary)",
               }}
             >

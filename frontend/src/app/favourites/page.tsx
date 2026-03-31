@@ -121,14 +121,14 @@ export default function FavouritesPage() {
               </h2>
               <p
                 className="text-[13px] mb-8"
-                style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-muted)" }}
               >
                 Utwórz konto lub zaloguj się, aby zapisywać karty do swojej kolekcji
               </p>
               <Link
                 href="/account"
                 className="inline-flex items-center gap-2 px-6 py-3 text-[12px] font-black uppercase tracking-wider transition-colors duration-100"
-                style={{ background: "var(--accent)", color: "#000", fontFamily: "var(--font-mono)" }}
+                style={{ background: "var(--accent)", color: "#000" }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = "#FFF")}
                 onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
               >
@@ -137,7 +137,7 @@ export default function FavouritesPage() {
             </div>
           ) : error ? (
             <div className="text-center py-20">
-              <p className="text-[13px]" style={{ color: "var(--error)", fontFamily: "var(--font-mono)" }}>
+              <p className="text-[13px]" style={{ color: "var(--error)" }}>
                 {error}
               </p>
             </div>
@@ -157,14 +157,14 @@ export default function FavouritesPage() {
               </h2>
               <p
                 className="text-[13px] mb-8"
-                style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-muted)" }}
               >
                 Przeglądaj naszą kolekcję i kliknij ikonę serca, aby zapisać karty tutaj
               </p>
               <Link
                 href="/single-cards"
                 className="inline-flex items-center gap-2 px-6 py-3 text-[12px] font-black uppercase tracking-wider transition-colors duration-100"
-                style={{ background: "var(--accent)", color: "#000", fontFamily: "var(--font-mono)" }}
+                style={{ background: "var(--accent)", color: "#000" }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = "#FFF")}
                 onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
               >
@@ -175,7 +175,7 @@ export default function FavouritesPage() {
             <>
               <p
                 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-6"
-                style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-muted)" }}
               >
                 {products.length} {products.length === 1 ? "produkt" : "produktów"}
               </p>

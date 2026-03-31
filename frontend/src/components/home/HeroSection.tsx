@@ -62,7 +62,7 @@ export default function HeroSection() {
             <div className="w-8 h-px" style={{ background: "var(--accent)", opacity: 0.4 }} />
             <span
               className="text-[10px] tracking-[0.15em] uppercase"
-              style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               Kolekcja Premium
             </span>
@@ -173,7 +173,7 @@ export default function HeroSection() {
               </span>
               <span
                 className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em]"
-                style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-muted)" }}
               >
                 {stat.label}
               </span>

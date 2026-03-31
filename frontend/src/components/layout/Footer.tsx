@@ -91,7 +91,7 @@ export default function Footer() {
 
             <p
               className="text-[12px] max-w-[360px] leading-relaxed mb-6"
-              style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               Polska baza kart Pokemon premium.
               Wyselekcjonowane slaby, karty pojedyncze i produkty zapakowane — każda karta zweryfikowana, każda ocena potwierdzona.
@@ -113,7 +113,6 @@ export default function Footer() {
                 >
                   <span
                     className="text-[11px] font-bold tracking-wider uppercase"
-                    style={{ fontFamily: "var(--font-mono)" }}
                   >
                     Zapisano! Sprawdź swoją skrzynkę.
                   </span>
@@ -138,7 +137,6 @@ export default function Footer() {
                         border: "1px solid var(--border-default)",
                         borderRight: "none",
                         color: "var(--text-primary)",
-                        fontFamily: "var(--font-mono)",
                       }}
                       onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border-default)")}
@@ -173,7 +171,7 @@ export default function Footer() {
               <MapPin size={12} style={{ color: "var(--text-muted)" }} />
               <span
                 className="text-[10px] tracking-wider uppercase"
-                style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+                style={{ color: "var(--text-muted)" }}
               >
                 Warszawa, Polska
               </span>
@@ -202,7 +200,6 @@ export default function Footer() {
                         className="text-[11px] font-medium tracking-[0.06em] transition-all duration-150 inline-flex items-center gap-0"
                         style={{
                           color: "var(--text-secondary)",
-                          fontFamily: "var(--font-mono)",
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.color = "var(--accent)";
@@ -230,7 +227,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-5">
             <span
               className="text-[10px] tracking-[0.12em] uppercase"
-              style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               &copy; {new Date().getFullYear()} Collectify. Wszelkie prawa zastrzeżone.
             </span>

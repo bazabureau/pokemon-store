@@ -56,7 +56,7 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --font-display: "Syne", "Impact", system-ui, sans-serif;
-  --font-body: "DM Sans", "Helvetica Neue", system-ui, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Courier New", ui-monospace, monospace;
 }
 
@@ -74,7 +74,7 @@ html {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   line-height: 1.5;
   overflow-x: hidden;
 }
