@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════
+   COLLECTIFY — BRUTALIST DESIGN SYSTEM
+   Raw. Bold. Unapologetic.
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Backgrounds — stark */
+  --bg-void: #000000;
+  --bg-primary: #050505;
+  --bg-surface: #0A0A0A;
+  --bg-elevated: #111111;
+  --bg-overlay: rgba(0, 0, 0, 0.92);
+
+  /* Borders — visible, intentional */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-accent: #FF6B2C;
+
+  /* Orange accent */
+  --accent: #FF6B2C;
+  --accent-hover: #FF8347;
+  --accent-soft: rgba(255, 107, 44, 0.1);
+
+  /* Text — high contrast */
+  --text-primary: #FFFFFF;
+  --text-secondary: #999999;
+  --text-muted: #555555;
+  --text-accent: #FF6B2C;
+
+  /* Grading */
+  --grade-gold: #F5A623;
+  --grade-silver: #C0C0C0;
+  --grade-bronze: #CD7F32;
+
+  /* Status */
+  --success: #00FF66;
+  --error: #FF3333;
+  --warning: #FFCC00;
+}
+
+/* ─── TAILWIND THEME ──────────────────────────── */
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --font-display: "Syne", "Impact", system-ui, sans-serif;
+  --font-body: "DM Sans", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", ui-monospace, monospace;
+}
+
+/* ─── BASE ────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ─── NOISE — heavier for brutalist texture ──── */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ─── HIDE HORIZONTAL SCROLLBAR ──────────────── */
+
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── SCROLLBAR — raw ─────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border: 1px solid var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ─── SELECTION ───────────────────────────────── */
+
+::selection {
+  background: var(--accent);
+  color: #000000;
+}
+
+/* ─── TYPOGRAPHY — bold and raw ───────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+/* ─── FOCUS ───────────────────────────────────── */
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 0;
+}
+
+/* ─── UTILITY: BRUTALIST ─────────────────────── */
+
+.text-gradient-orange {
+  color: var(--accent);
+  -webkit-text-fill-color: var(--accent);
+}
+
+.glass {
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid var(--border-default);
+}
+
+/* No holographic — replaced with hard scan line */
+.card-holo {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-holo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+}
+
+.card-holo:hover::before {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 107, 44, 0.03) 2px,
+    rgba(255, 107, 44, 0.03) 4px
+  );
+}
+
+/* ─── ANIMATIONS — sharp, fast ────────────────── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes heroCardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes heroSheen {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease both;
+}
+
+/* ─── MARQUEE ─────────────────────────────────── */
+
+.announcement-scroll {
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.announcement-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* ─── STAGGER ─────────────────────────────────── */
+
+.stagger-children > * {
+  animation: fadeInUp 0.35s ease-out both;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.03s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.06s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.09s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.12s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.15s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.18s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.21s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.24s; }
+
+/* ─── 3D CARD PARTICLES ─────────────────────── */
+
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0px) translateZ(40px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-15px) translateZ(50px);
+    opacity: 1;
+  }
+}
